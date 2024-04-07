@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300');
+
+* {
+	margin:0;
+	padding:0;
+}
+html {
+	width:100%;
+	height:100%;
+}
+body {
+	width:100%;
+	height:100%;
+	background-color:#333;
+	color:#eee;
+}
+h1 {
+	font-size:3em;
+}
+#flexD {
+	width:100%;
+	height:100%;
+	text-align: center;
+	display:flex;
+	flex-direction: column;
+  	justify-content: center;
+}
+#flexH {
+	flex-grow:5;
+	display:flex;
+	font-family: 'Comfortaa', cursive;
+	flex-direction: column;
+  	justify-content: center;
+}
+#flexH h1 {
+	display:block;
+}
+#flexH a {
+	color: hotpink;
+	margin-top:2em;
+}
+#flexF {
+	flex-grow:1;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+}
+#flexF svg {
+	width:3em;
+	height:3em;
+}
+
+#flexF #gh {
+	display:block;
+	padding: 0 0.5em 0 0.5em;
+}
+#flexF #gh svg {
+	fill:#eee;
+	transition:fill 0.3s;
+	transition-timing-function: ease;
+}
+#flexF #gh svg:hover {
+	fill:#000;
+}
+
+#flexF #love {
+	display:block;
+	padding: 0 0.5em 0 0.5em;
+}
+#flexF #love svg {
+	fill:#eee;
+	transition:fill 0.3s;
+	transition-timing-function:ease;
+}
+#flexF #love svg:hover {
+	fill:#c13;
+}
+#flexFF {
+	flex-grow:0.5;
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	font-family:sans-serif;
+}
+#flexFF #imp a {
+	color:#eee;
+	text-decoration:none;
+}
+#flexFF #imp a:hover {
+	color:#000;
+}
