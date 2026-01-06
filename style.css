@@ -1,93 +1,145 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300');
+@font-face {
+    font-family: 'Montserrat';
+    src: url(Montserrat-VF.woff2) format('woff2');
+}
 
-* {
-	margin:0;
-	padding:0;
+:root {
+    --color-background: #FEF2FF;
+    --color-primary: #0F000A;
+    --color-accent: #6A5FDB;
 }
-html {
-	width:100%;
-	height:100%;
+
+/* mini css reset */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 body {
-	width:100%;
-	height:100%;
-	background-color:#333;
-	color:#eee;
+    background-color: var(--color-background);
+    color: var(--color-primary);
 }
+
 h1 {
-	font-size:3em;
-}
-#flexD {
-	width:100%;
-	height:100%;
-	text-align: center;
-	display:flex;
-	flex-direction: column;
-  	justify-content: center;
-}
-#flexH {
-	flex-grow:5;
-	display:flex;
-	font-family: 'Comfortaa', cursive;
-	flex-direction: column;
-  	justify-content: center;
-}
-#flexH h1 {
-	display:block;
-}
-#flexH a {
-	color: hotpink;
-	margin-top:2em;
-}
-#flexF {
-	flex-grow:1;
-	display:flex;
-	flex-direction:row;
-	justify-content:center;
-	align-items:center;
-}
-#flexF svg {
-	width:3em;
-	height:3em;
+    font-family: Montserrat;
+    font-weight: 100;
+    font-kerning: none;
 }
 
-#flexF #gh {
-	display:block;
-	padding: 0 0.5em 0 0.5em;
-}
-#flexF #gh svg {
-	fill:#eee;
-	transition:fill 0.3s;
-	transition-timing-function: ease;
-}
-#flexF #gh svg:hover {
-	fill:#000;
+p {
+    font-family: Montserrat;
 }
 
-#flexF #love {
-	display:block;
-	padding: 0 0.5em 0 0.5em;
+a {
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
 }
-#flexF #love svg {
-	fill:#eee;
-	transition:fill 0.3s;
-	transition-timing-function:ease;
+
+a:hover {
+    color: var(--color-accent);
 }
-#flexF #love svg:hover {
-	fill:#c13;
+
+#container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
-#flexFF {
-	flex-grow:0.5;
-	display:flex;
-	flex-direction:row;
-	justify-content:center;
-	align-items:center;
-	font-family:sans-serif;
+
+@keyframes animateWeight {
+    from {
+        font-variation-settings: "wght" 100;
+    }
+    to {
+        font-variation-settings: "wght" 900;
+    }
 }
-#flexFF #imp a {
-	color:#eee;
-	text-decoration:none;
+
+/* sm 40rem (640px) */
+@media (width >= 40rem) {
+    #animation {
+        --font-size: 40pt !important;
+    }
 }
-#flexFF #imp a:hover {
-	color:#000;
+
+/* md 48rem (768px) */
+@media (width >= 48rem) {
+    #animation {
+        --font-size: 50pt !important;
+    }
+}
+
+/* lg 64rem (1024px) */
+@media (width >= 64rem) {
+    #animation {
+        --font-size: 60pt !important;
+    }
+}
+
+/* xl 80rem (1280px) */
+@media (width >= 80rem) {
+    #animation {
+        --font-size: 70pt !important;
+    }
+}
+
+/* 2xl 96rem (1536px) */
+@media (width >= 96) {
+    #animation {
+        --font-size: 80pt !important;
+    }
+}
+
+#animation {
+    --font-size: 30pt;
+    font-family: Montserrat;
+    font-weight: 100;
+    font-kerning: none;
+    font-size: var(--font-size);
+    font-stretch: 120%;
+
+    margin: 0 auto;
+}
+
+#animation div {
+    line-height: var(--font-size);
+}
+
+#animation div span {
+    animation-name: animateWeight;
+    animation-duration: 7s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#footer {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-family: Montserrat;
+}
+
+#footer #gh {
+    display: inline-block;
+}
+
+#footer #gh svg {
+    width: 2rem;
+    height: 2rem;
+    fill: var(--color-primary);
+}
+
+#footer #gh svg:hover {
+    fill: var(--color-accent);
+}
+
+#impressum h1 {
+    margin-bottom: 1rem;
 }
